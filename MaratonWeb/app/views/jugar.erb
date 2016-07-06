@@ -1,0 +1,26 @@
+<h2> Vamos a jugar, eligue que deck quieres <%= session[:user_name] %> ! </h2>
+
+
+  <% @deck_val.each do |deck| %>
+    
+    <form action="/deck/<%=deck.id%>" method="post">
+      <br><input type="submit" value="<%=deck.name_deck%>!"> <br>
+    </form>
+  <%end%>
+
+<!--   <form action="/login" method="post">
+   
+    Haz tu login!
+    <br>
+    <p>Mail</p><input type="email" name="Mail" ><br>
+    <p>Contraseña</p><input type="password" name="Contraseña" ><br>
+    <br>
+
+    <input type="submit" value="Login!"> <br>
+
+  </form>
+
+  <form action="/salir" method="get">
+    <br><input type="submit" value="Salir!"> <br>
+  </form>
+ -->

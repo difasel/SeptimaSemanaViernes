@@ -1,0 +1,16 @@
+<h2> Trata de contestas las preguntas <%= session[:user_name] %> ! </h2>
+
+
+
+    
+    <form action="/resultado/<%=@valores_card.first.deck_id%>" method="post">
+      <% @valores_card.each do |card| %>
+        <label for "question<%=card.id%>"><%=card.question%></lable>
+        <br>
+        <input type="text" name="answer_text_<%=card.id%>">
+        <br>
+        <%end%>
+        <br>
+      <input type="submit" value="Comprobar"> <br>
+    </form>
+  

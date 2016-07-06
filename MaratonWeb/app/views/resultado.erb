@@ -1,0 +1,20 @@
+<h2> Este es el resultado de <%= session[:user_name] %> todas sus rondas ! </h2>
+
+<%new_count = 1%>
+
+  <% @user.rounds.each do |rounds_val| %>
+    <p>---------------------------------</p>
+    <p>Esta es la ronda numero:  <%= new_count %> </p>
+    <p>De la baraja <span style = "color:blue"><%= rounds_val.deck_name %><span></p>
+    <p>Y obtuviste un total de <%= rounds_val.correct_answers %> respuestas correctas </p>
+
+    <%new_count += 1%>
+  <%end%>
+
+<p>---------------------------------</p>
+
+
+    
+<form action = "/salir" method="get">
+    <input type="submit" name="salir" value="Salir">
+</form>
